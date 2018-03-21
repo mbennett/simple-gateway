@@ -1,12 +1,11 @@
 ---
 applications:
 - name: simple-gateway
-  memory: 1G
-  host: simple-gateway-sandbox
+  memory: 512M
   random-route: true
   path: target/simple-gateway-0.0.1-SNAPSHOT.jar
   services:
-    - config-server
-    - service-registry
+   - config-server
+   - service-registry
   env:
-    JAVA_OPTS: '-Dspring.profiles.active=dev'
+    SPRING_PROFILES_ACTIVE: dev
