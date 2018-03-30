@@ -1,11 +1,13 @@
 ---
 applications:
 - name: simple-gateway
-  memory: 512M
-  random-route: true
+  memory: 1G
+  routes:
+  - route: simple-gateway-64119.cfapps.io
   path: target/simple-gateway-0.0.1-SNAPSHOT.jar
   services:
    - config-server
    - service-registry
   env:
     SPRING_PROFILES_ACTIVE: dev
+  buildpack: java_buildpack
