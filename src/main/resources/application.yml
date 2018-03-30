@@ -24,8 +24,8 @@ security:
 management:
   security:
     enabled: false
-debug: true
+debug: false
 trace: false
 logging:
   level:
-    root: DEBUG
+    root: INFO
